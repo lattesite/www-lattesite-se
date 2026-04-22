@@ -1,0 +1,14 @@
+
+
+
+
+https://resonant-sunshine-ae4de3.netlify.app/                 https://www.lattesite.se/              301!
+http://resonant-sunshine-ae4de3.netlify.app/                  https://www.lattesite.se/              301!
+https://resonant-sunshine-ae4de3.netlify.app/*                https://www.lattesite.se/:splat        301!
+http://resonant-sunshine-ae4de3.netlify.app/*                 https://www.lattesite.se/:splat        301!
+
+#
+# 404
+#
+
+/*                                                           /404/                                      404

@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html
+    lang="cs"
+>
+    <head
+    >
+        <title
+        >LatteSite</title>
+        <meta
+            content="width=device-width, initial-scale=1"
+            name="viewport"
+        >
+        <meta
+            content="text/html; charset=utf-8"
+            http-equiv="content-type"
+        >
+        <meta
+            content="LatteSite is an Open Source, SEO-focused, lightweight static site generator (SSG) framework in Java."
+            name="description"
+        >
+        <meta
+            content="#192A35"
+            name="theme-color"
+        >
+        <meta
+            content="java, static site generator, seo, html, lightweight framework, ssg, website generation, sitemap, structured data, localization"
+            name="keywords"
+        >
+        <link
+            rel="canonical"
+            href="https://www.lattesite.se/cs/"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/"
+            hreflang="en"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/sv/"
+            hreflang="sv"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/es/"
+            hreflang="es"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/pt/"
+            hreflang="pt"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/de/"
+            hreflang="de"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/ja/"
+            hreflang="ja"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/ko/"
+            hreflang="ko"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/ru/"
+            hreflang="ru"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/fr/"
+            hreflang="fr"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/it/"
+            hreflang="it"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/zh/"
+            hreflang="zh"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/tr/"
+            hreflang="tr"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/nl/"
+            hreflang="nl"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/pl/"
+            hreflang="pl"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/vi/"
+            hreflang="vi"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/id/"
+            hreflang="id"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/cs/"
+            hreflang="cs"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/uk/"
+            hreflang="uk"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/el/"
+            hreflang="el"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/ro/"
+            hreflang="ro"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/hu/"
+            hreflang="hu"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/th/"
+            hreflang="th"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/da/"
+            hreflang="da"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/sk/"
+            hreflang="sk"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/fi/"
+            hreflang="fi"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/bg/"
+            hreflang="bg"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/sr/"
+            hreflang="sr"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/nb/"
+            hreflang="nb"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/hr/"
+            hreflang="hr"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/lt/"
+            hreflang="lt"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/sl/"
+            hreflang="sl"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/ca/"
+            hreflang="ca"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/et/"
+            hreflang="et"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/lv/"
+            hreflang="lv"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/hi/"
+            hreflang="hi"
+        >
+        <link
+            rel="alternate"
+            href="https://www.lattesite.se/"
+            hreflang="x-default"
+        >
+        <link
+            rel="shortcut icon"
+            href="/favicon.png"
+        >
+        <link
+            rel="apple-touch-icon"
+            href="/favicon.png"
+            type="image/x-icon"
+        >
+        <meta
+            content="https://www.lattesite.se/cs/"
+            property="og:url"
+        >
+        <meta
+            content="website"
+            property="og:type"
+        >
+        <meta
+            content="LatteSite"
+            property="og:site_name"
+        >
+        <meta
+            content="LatteSite"
+            property="og:title"
+        >
+        <meta
+            content="LatteSite is an Open Source, SEO-focused, lightweight static site generator (SSG) framework in Java."
+            property="og:description"
+        >
+        <meta
+            content="https://www.lattesite.se/images/opengraph/opengraph.jpg"
+            property="og:image"
+        >
+        <meta
+            content="image/jpg"
+            property="og:image:type"
+        >
+        <meta
+            content="LatteSite is an Open Source, SEO-focused, lightweight static site generator (SSG) framework in Java."
+            property="og:image:alt"
+        >
+        <meta
+            content="1920"
+            property="og:image:width"
+        >
+        <meta
+            content="1080"
+            property="og:image:height"
+        >
+        <meta
+            content="summary_large_image"
+            name="twitter:card"
+        >
+        <meta
+            content="LatteSite"
+            name="twitter:title"
+        >
+        <meta
+            content="LatteSite is an Open Source, SEO-focused, lightweight static site generator (SSG) framework in Java."
+            name="twitter:description"
+        >
+        <meta
+            content="https://www.lattesite.se/images/opengraph/opengraph.jpg"
+            name="twitter:image"
+        >
+        <meta
+            content="image/jpg"
+            name="twitter:image:type"
+        >
+        <meta
+            content="LatteSite is an Open Source, SEO-focused, lightweight static site generator (SSG) framework in Java."
+            name="twitter:image:alt"
+        >
+        <script
+            type="application/ld+json"
+        >
+{
+    "@context": "https://schema.org/",
+    "@type": "BreadcrumbList",
+    "@id": "https://www.lattesite.se/cs/#breadcrumbs",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.lattesite.se/cs/"
+        }
+    ]
+}
+        </script>
+        <script
+            type="application/ld+json"
+        >
+{
+    "@context": "https://schema.org/",
+    "@type": "WebSite",
+    "@id": "https://www.lattesite.se/cs#website",
+    "name": "LatteSite",
+    "url": "https://www.lattesite.se/cs/",
+    "description": "LatteSite is an Open Source, SEO-focused, lightweight static site generator (SSG) framework in Java.",
+    "inLanguage": {
+        "@context": "https://schema.org/",
+        "@type": "Language",
+        "@id": "https://www.lattesite.se/cs#language",
+        "name": "cs"
+    }
+}
+        </script>
+        <script
+            type="application/ld+json"
+        >
+{
+    "@context": "https://schema.org/",
+    "@type": "WebPage",
+    "@id": "https://www.lattesite.se/cs/",
+    "name": "LatteSite",
+    "url": "https://www.lattesite.se/cs/",
+    "description": "LatteSite is an Open Source, SEO-focused, lightweight static site generator (SSG) framework in Java.",
+    "inLanguage": {
+        "@context": "https://schema.org/",
+        "@type": "Language",
+        "@id": "https://www.lattesite.se/cs#language",
+        "name": "cs"
+    },
+    "isPartOf": {
+        "@context": "https://schema.org/",
+        "@type": "WebSite",
+        "@id": "https://www.lattesite.se/cs#website",
+        "name": "LatteSite",
+        "url": "https://www.lattesite.se/cs/",
+        "description": "LatteSite is an Open Source, SEO-focused, lightweight static site generator (SSG) framework in Java.",
+        "inLanguage": {
+            "@context": "https://schema.org/",
+            "@type": "Language",
+            "@id": "https://www.lattesite.se/cs#language",
+            "name": "cs"
+        }
+    },
+    "audience": {
+        "@context": "https://schema.org/",
+        "@type": "PeopleAudience",
+        "@id": "https://www.lattesite.se/cs#audience",
+        "suggestedGender": "unisex",
+        "audienceType": "twitch streamers, live gaming streamers",
+        "geographicArea": {
+            "@context": "https://schema.org/",
+            "@type": "Country",
+            "@id": "https://www.lattesite.se/cs#country",
+            "name": "World"
+        }
+    }
+}
+        </script>
+        <script
+            type="application/ld+json"
+        >
+{
+    "@context": "https://schema.org/",
+    "@type": "AboutPage",
+    "@id": "https://www.lattesite.se/cs/#about-page",
+    "name": "LatteSite",
+    "url": "https://www.lattesite.se/cs/about/",
+    "about": {
+        "@context": "https://schema.org/",
+        "@type": "SportsOrganization",
+        "@id": "https://www.lattesite.se/#organization",
+        "image": {
+            "@context": "https://schema.org/",
+            "@type": "ImageObject",
+            "@id": "https://www.lattesite.se/cs#logotype",
+            "url": "/logotype.png"
+        },
+        "logo": {
+            "@context": "https://schema.org/",
+            "@type": "ImageObject",
+            "@id": "https://www.lattesite.se/cs#logotype",
+            "url": "/logotype.png"
+        },
+        "url": "https://www.lattesite.se/cs/",
+        "name": "LatteSite",
+        "description": "LatteSite is an Open Source, SEO-focused, lightweight static site generator (SSG) framework in Java.",
+        "email": "admin@lattesite.se",
+        "areaServed": {
+            "@context": "https://schema.org/",
+            "@type": "Country",
+            "@id": "https://www.lattesite.se/cs#country",
+            "name": "World"
+        },
+        "foundingDate": "2026-02-01",
+        "isicV4": [
+            "9312",
+            "9329",
+            "9499",
+            "8541"
+        ],
+        "brand": {
+            "@context": "https://schema.org/",
+            "@type": "Brand",
+            "@id": "https://www.lattesite.se/cs/#brand",
+            "name": "LatteSite"
+        },
+        "owns": {
+            "@context": "https://schema.org/",
+            "@type": "Brand",
+            "@id": "https://www.lattesite.se/cs/#brand",
+            "name": "LatteSite"
+        },
+        "keywords": "java, static site generator, seo, html, lightweight framework, ssg, website generation, sitemap, structured data, localization",
+        "knowsAbout": "java, static site generator, seo, html, lightweight framework, ssg, website generation, sitemap, structured data, localization",
+        "sameAs": [
+        ]
+    }
+}
+        </script>
+        <script
+            type="application/ld+json"
+        >
+{
+    "@context": "https://schema.org/",
+    "@type": "SportsOrganization",
+    "@id": "https://www.lattesite.se/#organization",
+    "image": {
+        "@context": "https://schema.org/",
+        "@type": "ImageObject",
+        "@id": "https://www.lattesite.se/cs#logotype",
+        "url": "/logotype.png"
+    },
+    "logo": {
+        "@context": "https://schema.org/",
+        "@type": "ImageObject",
+        "@id": "https://www.lattesite.se/cs#logotype",
+        "url": "/logotype.png"
+    },
+    "url": "https://www.lattesite.se/cs/",
+    "name": "LatteSite",
+    "description": "LatteSite is an Open Source, SEO-focused, lightweight static site generator (SSG) framework in Java.",
+    "email": "admin@lattesite.se",
+    "areaServed": {
+        "@context": "https://schema.org/",
+        "@type": "Country",
+        "@id": "https://www.lattesite.se/cs#country",
+        "name": "World"
+    },
+    "foundingDate": "2026-02-01",
+    "isicV4": [
+        "9312",
+        "9329",
+        "9499",
+        "8541"
+    ],
+    "brand": {
+        "@context": "https://schema.org/",
+        "@type": "Brand",
+        "@id": "https://www.lattesite.se/cs/#brand",
+        "name": "LatteSite"
+    },
+    "owns": {
+        "@context": "https://schema.org/",
+        "@type": "Brand",
+        "@id": "https://www.lattesite.se/cs/#brand",
+        "name": "LatteSite"
+    },
+    "keywords": "java, static site generator, seo, html, lightweight framework, ssg, website generation, sitemap, structured data, localization",
+    "knowsAbout": "java, static site generator, seo, html, lightweight framework, ssg, website generation, sitemap, structured data, localization",
+    "sameAs": [
+    ]
+}
+        </script>
+        <style
+        >
+*:focus {
+    outline: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    color: #313435;
+    font-size: 18px;
+    background-image: url(/images/backgrounds/background.jpg);
+    background-position: center center;
+}
+body, button, input, select {
+    font-size: 18px;
+    font-family: MainFont, sans-serif;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+p {
+    margin-top: 0;
+    line-height: 1.5em;
+}
+option {
+    cursor: pointer;
+}
+a {
+    color: #30B1FF;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: 2px underline;
+}
+ul {
+    list-style: disc;
+    padding-left: 2em;
+}
+ol {
+    padding-left: 2em;
+}
+ul li, ol li {
+    margin-top: 0;
+    line-height: 1.5;
+    margin-bottom: 0.25em;
+}
+table {
+    width: 100%;
+}
+code {
+    font-family: monospace;
+    background-color: rgba(0,0,0,0.50);
+    overflow: auto;
+    padding: 4px 4px;
+}
+blockquote {
+    line-height: 1.5em;
+    font-style: italic;
+    padding: 1em 1em;
+    margin: 0;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+}
+@font-face {
+    font-family: MainFont;
+    src: url('/fonts/jost_100_900.woff2') format('woff2');
+    font-display: block;
+    font-weight: 100 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: MainFont;
+    src: url('/fonts/jost_100_900_italic.woff2') format('woff2');
+    font-display: block;
+    font-weight: 100 900;
+    font-style: italic;
+}
+.comp-page-header {
+    opacity: 0;
+    animation: fadeInUp 0.48s ease-out forwards;
+}
+.comp-page-header__inner {
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 24px 24px 24px 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+@media (max-width:800px) {
+    .comp-page-header__inner {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+.comp-page-header__inner__col1 {
+    font-size: 16px;
+}
+.comp-page-header__inner__col1 a {
+    position: relative;
+}
+.comp-page-header__inner__col2 {
+    display: flex;
+    gap: 24px;
+    justify-content: end;
+    align-content: center;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+@media (max-width:800px) {
+    .comp-page-header__inner__col2 {
+        justify-content: start;
+    }
+}
+@media (max-width:800px) {
+    .comp-page-header__inner__col2 a {
+        flex-grow: 1;
+    }
+}
+.comp-page-banner {
+    opacity: 0;
+    animation: fadeInUp 0.48s ease-out forwards;
+}
+.comp-page-banner__inner {
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 128px 24px 128px 24px;
+    display: flex;
+    flex-direction: column;;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+.comp-page-banner__inner__header {
+    text-align: center;
+    font-size: 72px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    text-wrap: balance;
+}
+@media (max-width:800px) {
+    .comp-page-banner__inner__header {
+        font-size: 36px;
+    }
+}
+.comp-page-banner__inner__sub-text {
+    text-align: center;
+    font-size: 22px;
+    text-wrap: balance;
+    line-height: 1.5em;
+}
+.comp-page-alerts-container {
+    opacity: 0;
+    animation: fadeInUp 0.48s ease-out forwards;
+}
+.comp-page-alerts-container__inner {
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 0 24px 0 24px;
+    text-align: center;
+    text-wrap: balance;
+}
+.comp-page-breadcrumbs-container {
+    opacity: 0;
+    animation: fadeInUp 0.48s ease-out forwards;
+}
+.comp-page-breadcrumbs-container__inner {
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 24px 24px 24px 24px;
+    font-size: 16px;
+}
+.comp-page-breadcrumbs-container__inner__link {
+    display: inline-block;
+    margin-right: 4px;
+    font-weight: 400;
+}
+@media (max-width:800px) {
+    .comp-page-breadcrumbs-container__inner__link {
+        margin-bottom: 13px;
+        margin-right: 12px;
+    }
+}
+.comp-page-breadcrumbs-container__inner__delimiter {
+    margin-right: 4px;
+    color: #999999;
+    font-size: 14px;
+}
+.comp-page-content-container {
+    min-height: 50vh;
+    opacity: 0;
+    animation: fadeInUp 0.48s ease-out forwards;
+}
+.comp-page-content-container__inner {
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 24px 24px 24px 24px;
+}
+.front-page-preview-section-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.front-page-preview-section-centered p {
+    text-align: center;
+    text-wrap: balance;
+}
+.front-page-preview-section-centered h2 {
+    text-align: center;
+}
+.front-page-supporters-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 1em;
+}
+@media (max-width:800px) {
+    .front-page-supporters-container {
+        max-height: 400px;
+        overflow: hidden;
+    }
+}
+.front-page-supporters-container a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+    width: calc(10% - 10px);
+    transition: box-shadow 0.24s ease;
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    border-radius: 12px;
+}
+@media (max-width:800px) {
+    .front-page-supporters-container a {
+        width: calc(20% - 0px);
+    }
+}
+.front-page-supporters-container a:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-decoration: none;
+}
+.front-page-supporters-container a:hover img {
+    transform: rotate(360deg);
+}
+.front-page-supporters-container a img {
+    border-radius: 100%;
+    object-fit: cover;
+    transition: transform .56s ease;
+}
+.comp-page-footer-slogan {
+    opacity: 0;
+    animation: fadeInUp 0.48s ease-out forwards;
+}
+.comp-page-footer-slogan__inner {
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 64px 24px 64px 24px;
+    text-align: center;
+    text-wrap: balance;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+}
+.comp-button-link {
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    line-height: 1.5em;
+    text-align: center;
+    text-wrap: balance;
+    transition: all .24s ease;
+    box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+}
+.comp-button-link:hover {
+    text-decoration: none;
+    transform: translateY(-10%);
+}
+.comp-button-link--size-small {
+    font-size: 14px;
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+.comp-button-link--size-normal {
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+.comp-button-link--size-large {
+    font-size: 24px;
+    padding: 8px 32px;
+    border-radius: 4px;
+}
+@media (max-width:800px) {
+    .comp-button-link--size-large {
+        font-size: 16px;
+        padding: 8px 32px;
+        border-radius: 4px;
+    }
+}
+.comp-button-link--color-blue {
+    background-color: #007BC7;
+    border: 1px solid #30B1FF;
+    color: #FFFFFF;
+}
+.comp-button-link--color-blue:hover {
+    background-color: rgba(48, 177, 255, 0.1);
+    color: #30B1FF;
+}
+.comp-button-link--color-purple {
+    background-color: #9147FF;
+    border: 1px solid #9147FF;
+    color: #FFFFFF;
+}
+.comp-button-link--color-purple:hover {
+    background-color: white;
+    color: #9147FF;
+}
+.comp-page-footer-links {
+    opacity: 0;
+    animation: fadeInUp 0.48s ease-out forwards;
+}
+.comp-page-footer-links__inner {
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 48px 24px 48px 24px;
+    display: flex;
+    gap: 16px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+@media (max-width:800px) {
+    .comp-page-footer-links__inner a {
+        flex-grow: 1;
+    }
+}
+.comp-page-footer-tracking-notice {
+    opacity: 0;
+    animation: fadeInUp 0.48s ease-out forwards;
+}
+.comp-page-footer-tracking-notice__inner {
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 0 24px 48px 24px;
+    text-align: center;
+    font-size: 14px;
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+        </style>
+    </head>
+    <body
+    >
+        <div
+            class="comp-page-header"
+            role="navigation"
+        >
+            <div
+                class="comp-page-header__inner"
+            >
+                <div
+                    class="comp-page-header__inner__col1"
+                >
+                    <a
+                        href="/cs/"
+                        title="LatteSite"
+                    >
+                        <img
+                            src="/logotype.png"
+                            alt="Lightweight static site generation in Java."
+                            title="LatteSite"
+                            width="150"
+                            height="28"
+                        >
+                    </a>
+                    <div
+                        style="font-size: 14px; margin-bottom: 0.5em;"
+                    >Lightweight static site generation in Java.</div>
+                </div>
+                <div
+                    class="comp-page-header__inner__col2"
+                ></div>
+            </div>
+        </div>
+        <div
+            class="comp-page-banner"
+            role="banner"
+        >
+            <div
+                class="comp-page-banner__inner"
+            >
+                <h1
+                    class="comp-page-banner__inner__header"
+                >LatteSite</h1>
+                <div
+                    class="comp-page-banner__inner__sub-text"
+                >LatteSite is an Open Source, SEO-focused, lightweight static site generator (SSG) framework in Java.</div>
+            </div>
+        </div>
+        <div
+            class="comp-page-alerts-container"
+        >
+            <div
+                class="comp-page-alerts-container__inner"
+            >
+                <div
+                    style="font-size: 14px; font-style: italic; text-align: center; text-wrap: balance; color: #888888; margin-bottom: 1em;"
+                >Tato stránka byla pro vaše pohodlí přeložena našimi vysoce motivovanými AI stážisty. Ještě se učí, takže se mohlo pár chyb vloudit. Pro nejpřesnější informace se prosím obraťte na anglickou verzi.</div>
+            </div>
+        </div>
+        <div
+            class="comp-page-breadcrumbs-container"
+        >
+            <div
+                class="comp-page-breadcrumbs-container__inner"
+            >
+                <span
+                >Home</span>
+            </div>
+        </div>
+        <div
+            class="comp-page-content-container"
+            role="main"
+        >
+            <div
+                class="comp-page-content-container__inner"
+            ></div>
+        </div>
+        <div
+            class="comp-page-footer-slogan"
+        >
+            <div
+                class="comp-page-footer-slogan__inner"
+            >
+                <img
+                    src="/logotype.png"
+                    alt="Lightweight static site generation in Java."
+                    title="Lightweight static site generation in Java."
+                    width="250"
+                    height="47"
+                >
+                <div
+                >Lightweight static site generation in Java.</div>
+            </div>
+        </div>
+        <div
+            class="comp-page-footer-links"
+            role="contentinfo"
+        >
+            <div
+                class="comp-page-footer-links__inner"
+            >
+                <a
+                    href="/cs/about/"
+                    title="O nás"
+                    class="comp-button-link comp-button-link--size-small comp-button-link--color-blue"
+                >O nás</a>
+            </div>
+        </div>
+        <div
+            class="comp-page-footer-tracking-notice"
+        >
+            <div
+                class="comp-page-footer-tracking-notice__inner"
+            >
+                <p
+                >
+                    <p>Tato webová stránka používá <a href="https://www.pageviews.online/" rel="nofollow">PageviewsOnline Site Analytics</a> - nástroj webové analytiky s důrazem na soukromí a bez cookies.</p>
+                </p>
+            </div>
+        </div>
+        <script
+            src="https://scripts.pageviews.online/latest.min.js"
+            async="true"
+        ></script>
+    </body>
+</html>
